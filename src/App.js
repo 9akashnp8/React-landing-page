@@ -21,6 +21,7 @@ import logo from './img/logo.png'
 import playstore from './img/playstore.png';
 import appstore from './img/appstore.png';
 import './App.css';
+import { useState } from 'react';
 
 const primaryColor = "#F83D5C";
 
@@ -39,20 +40,21 @@ function Header() {
 
 function RegistrationForm() {
   return (
-    <Flex 
+    <Flex
+      className='gradient'
+      onMouse
       align='center' 
       direction='column'
       gap='1rem' 
-      w='100%' 
-      bgColor={primaryColor} 
+      w='100%'
       p={6} 
       borderRadius='1em'
     >
       <Heading textAlign='center' color='white'>Or Get In Touch with our Experts!</Heading>
-      <Input placeholder='full name' variant='filled' />
-      <Input placeholder='email address' variant='filled' />
-      <Input placeholder='phone' variant='filled' />
-      <Select placeholder='interested course' variant='filled'>
+      <Input placeholder='full name' _placeholder={{ opacity: 1, color: 'white' }} />
+      <Input placeholder='email address' _placeholder={{ opacity: 1, color: 'white' }} />
+      <Input placeholder='phone' _placeholder={{ opacity: 1, color: 'white' }} />
+      <Select placeholder='interested course' _placeholder={{ opacity: 1, color: 'white' }}>
         <option value='1'>CA Foundation</option>
         <option value='2'>CMA Foundation</option>
         <option value='3'>CSEET</option>

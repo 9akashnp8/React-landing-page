@@ -60,7 +60,7 @@ function FooterAddress() {
 
 export default function Footer() {
     return (
-        <Box bgColor='#F83D5C'>
+        <Box bg='linear-gradient(to right, #F83D5C, #FD4B2F)'>
             <Box className='container'>
                 <Flex align='center' justify='center' direction='column'>
                     <Box>

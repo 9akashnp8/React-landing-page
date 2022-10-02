@@ -45,7 +45,7 @@ export default function ThreeColumnCourses() {
   })
 
   return (
-    <Box bgColor={primaryColor} minH={['100%', '100%', '100vh']} display='flex' alignItems='center'>
+    <Box bg='linear-gradient(to right, #F83D5C, #FD4B2F)' minH={['100%', '100%', '100vh']} display='flex' alignItems='center'>
       <Box className='container' py={[5, 5, 5, 0]} px={[ , , 10, 0]}>
         <Heading color='white' size='3xl' textAlign='center'>Our Courses</Heading>
         <Grid 

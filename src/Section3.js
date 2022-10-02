@@ -55,7 +55,7 @@ function StepImage({image}) {
 function TwoEvenColumns({heading, description, image, isInverse}) {
     if (isInverse) {
         return (
-            <Box bgColor='#F83D5C' h='100vh' display='flex' alignItems='center' color='white' textAlign={['center', 'center', 'center', 'right']}>
+            <Box bg='linear-gradient(to right, #F83D5C, #FD4B2F)' h='100vh' display='flex' alignItems='center' color='white' textAlign={['center', 'center', 'center', 'right']}>
                 <Box className='container'>
                     <Grid gap={5} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
                         <StepImage image={image}/>
