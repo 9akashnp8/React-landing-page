@@ -43,19 +43,19 @@ function RegistrationForm() {
       align='center' 
       direction='column'
       gap='1rem' 
-      w={['100%', '100%', '100%', '75%']} 
+      w='100%' 
       bgColor={primaryColor} 
       p={6} 
       borderRadius='1em'
     >
-      <Heading color='white'>Register Now!</Heading>
+      <Heading textAlign='center' color='white'>Or Get In Touch with our Experts!</Heading>
       <Input placeholder='full name' variant='filled' />
       <Input placeholder='email address' variant='filled' />
       <Input placeholder='phone' variant='filled' />
       <Select placeholder='interested course' variant='filled'>
-        <option value='option1'>CA Foundation</option>
-        <option value='option1'>CMA Foundation</option>
-        <option value='option1'>CSEET</option>
+        <option value='1'>CA Foundation</option>
+        <option value='2'>CMA Foundation</option>
+        <option value='3'>CSEET</option>
       </Select>
       <Button>Register</Button>
     </Flex>
@@ -64,11 +64,11 @@ function RegistrationForm() {
 
 function HeroHeading() {
   return (
-    <Box>
-      <Heading as='h1' size='xl' lineHeight='tall'>
+    <Box textAlign={['center', 'center', 'center', 'left']}>
+      <Heading as='h1' size='xl'>
           Learn Unlimited with Lakshya Recorded Classes.
       </Heading>
-      <Text as='h3' fontSize='xl' py={5}>
+      <Text as='h3' fontSize={['1.1rem']} py={5}>
         <Highlight
           query='Download the App'
           styles={{ px: '2', py: '1', rounded: '0.5rem', bg: '#F83D5C', color: 'white' }}
@@ -77,8 +77,8 @@ function HeroHeading() {
         </Highlight>
       </Text>
       <Flex 
-        gap={10} 
-        textAlign='center'
+        mx={['auto', 'auto', 'auto', '0']}
+        gap={10}
         border='2px solid #F83D5C'
         borderRadius='1rem'
         p={5}
@@ -98,18 +98,20 @@ function HeroHeading() {
 
 function Hero() {
   return (
-    <Box className='container' h='calc(100vh - 110px)'>
-      <Grid 
-        gap={2} 
-        gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} 
-        gridAutoColumns='1fr' 
-        justifyItems='end'
-        alignItems='center'
-        h='calc(100vh - 190px)'
-      >
-        <HeroHeading/>
-        <RegistrationForm/>
-      </Grid>
+    <Box className='container' minH={['100vh', 'calc(100vh - 300px)']} my={5} display='flex'>
+      <Box>
+        <Grid 
+          gap={[10, 10, 10,  2]} 
+          gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} 
+          gridAutoColumns='1fr' 
+          justifyItems='end'
+          alignItems='center'
+          minHh={['100vh', 'calc(100vh - 300px)']}
+        >
+          <HeroHeading/>
+          <RegistrationForm/>
+        </Grid>
+      </Box>
     </Box>
   )
 }

@@ -34,11 +34,11 @@ function FooterLogo() {
 
 function FooterAddress() {
     return (
-        <List textAlign='right' spacing={3} color='white'>
+        <List textAlign={['left', 'left', 'right']} spacing={3} color='white'>
             <ListItem>
                 <List>
                     <ListItem>
-                        LAKSHYA
+                        Indian Institute of Commerce - Lakshya
                     </ListItem>
                     <ListItem>
                         Adv Easwara Iyer Rd, Pullepady, Kochi, Kerala
@@ -64,16 +64,16 @@ export default function Footer() {
             <Box className='container'>
                 <Flex align='center' justify='center' direction='column'>
                     <Box>
-                        <Heading color='white' textAlign='center' p={10} size='xl'>Download Now!</Heading>
+                        <Heading color='white' textAlign='center' p={[5, 5, 10]} size='xl'>Download Now!</Heading>
                         <Flex direction={['column', 'column', 'row']}>
-                            <Image src={googlePlayImage} alt='' p={10} />
-                            <Image src={googlePlayImage} alt='' p={10} />
+                            <Image src={googlePlayImage} alt='' p={[5, 5, 10]} />
+                            <Image src={googlePlayImage} alt='' p={[5, 5, 10]} />
                         </Flex>
                     </Box>
                 </Flex>
                 <Divider/>
                 <Grid
-                    gap={5} 
+                    gap={[10, 10, 5]} 
                     gridAutoFlow={['row', 'row', 'column']} 
                     gridAutoColumns='1fr' 
                     placeItems='center'

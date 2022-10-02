@@ -27,7 +27,7 @@ function CourseCard({course, description}) {
           textAlign='center'
           borderRadius='1rem'
         >
-            <Image w='200px' m='auto' src={courseCardPlaceholder} alt='' />
+            <Image w={['150px', '200px']} m='auto' src={courseCardPlaceholder} alt='' />
             <Heading>{course}</Heading>
             <Text>{description}</Text>
         </Box>
@@ -45,14 +45,14 @@ export default function ThreeColumnCourses() {
   })
 
   return (
-    <Box bgColor={primaryColor} h='100vh' display='flex' alignItems='center'>
-      <Box className='container'>
+    <Box bgColor={primaryColor} h={['100%', '100%', '100vh']} display='flex' alignItems='center'>
+      <Box className='container' py={[5, 0]}>
         <Heading color='white' size='3xl' textAlign='center'>Our Courses</Heading>
         <Grid 
           gap={5} 
-          gridAutoFlow={['row', 'row', 'column']} 
+          gridAutoFlow={['row', 'row', 'column']} // Responsive
           gridAutoColumns='1fr'
-          py='4rem'
+          py={['1.5rem', '2rem', '3rem', '4rem']} // Responsive
         >
           {courseCardList}
         </Grid>

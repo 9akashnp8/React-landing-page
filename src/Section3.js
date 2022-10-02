@@ -93,7 +93,7 @@ export default function FinalSection() {
         )
     })
     return (
-        <Box>
+        <Box textAlign={['center', 'center']}>
             {finalColumns}
         </Box>
     )
