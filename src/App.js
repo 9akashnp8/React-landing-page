@@ -65,7 +65,7 @@ function RegistrationForm() {
 function HeroHeading() {
   return (
     <Box textAlign={['center', 'center', 'center', 'left']}>
-      <Heading as='h1' size='xl'>
+      <Heading as='h1' size={['xl', 'xl', 'xl', '2xl']}>
           Learn Unlimited with Lakshya Recorded Classes.
       </Heading>
       <Text as='h3' fontSize={['1.1rem']} py={5}>
@@ -98,15 +98,20 @@ function HeroHeading() {
 
 function Hero() {
   return (
-    <Box className='container' minH={['100vh', 'calc(100vh - 300px)']} my={5} display='flex'>
-      <Box>
+    <Box 
+      className='container' 
+      minH={['100vh', '100vh', 'calc(100vh - 450px)', 'calc(100vh - 850px)', 'calc(100vh - 120px)']} 
+      display='flex'
+      mb={[5, 10, 10, 2]}
+    >
+      <Box display='flex'>
         <Grid 
-          gap={[10, 10, 10,  2]} 
+          gap={[5, 10, 10,  2]} 
           gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} 
           gridAutoColumns='1fr' 
           justifyItems='end'
           alignItems='center'
-          minHh={['100vh', 'calc(100vh - 300px)']}
+          minHh={['100vh', '100vh', 'calc(100vh - 450px)', 'calc(100vh - 850px)', 'calc(100vh - 120px)']}
         >
           <HeroHeading/>
           <RegistrationForm/>

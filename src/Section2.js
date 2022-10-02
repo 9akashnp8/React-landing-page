@@ -45,12 +45,12 @@ export default function ThreeColumnCourses() {
   })
 
   return (
-    <Box bgColor={primaryColor} h={['100%', '100%', '100vh']} display='flex' alignItems='center'>
-      <Box className='container' py={[5, 0]}>
+    <Box bgColor={primaryColor} minH={['100%', '100%', '100vh']} display='flex' alignItems='center'>
+      <Box className='container' py={[5, 5, 5, 0]} px={[ , , 10, 0]}>
         <Heading color='white' size='3xl' textAlign='center'>Our Courses</Heading>
         <Grid 
           gap={5} 
-          gridAutoFlow={['row', 'row', 'column']} // Responsive
+          gridAutoFlow={['row', 'row', 'row', 'column']} // Responsive
           gridAutoColumns='1fr'
           py={['1.5rem', '2rem', '3rem', '4rem']} // Responsive
         >

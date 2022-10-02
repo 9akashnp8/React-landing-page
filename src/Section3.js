@@ -55,7 +55,7 @@ function StepImage({image}) {
 function TwoEvenColumns({heading, description, image, isInverse}) {
     if (isInverse) {
         return (
-            <Box bgColor='#F83D5C' h='100vh' display='flex' alignItems='center' color='white'>
+            <Box bgColor='#F83D5C' h='100vh' display='flex' alignItems='center' color='white' textAlign={['center', 'center', 'center', 'right']}>
                 <Box className='container'>
                     <Grid gap={5} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
                         <StepImage image={image}/>
@@ -66,7 +66,7 @@ function TwoEvenColumns({heading, description, image, isInverse}) {
         )
     } else {
         return (
-            <Box h='100vh' display='flex' alignItems='center'>
+            <Box h='100vh' display='flex' alignItems='center' textAlign={['center', 'center', 'center', 'left']}>
                 <Box className='container'>
                     <Grid gap={5} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
                         <StepText heading={heading} description={description}/>
@@ -93,7 +93,7 @@ export default function FinalSection() {
         )
     })
     return (
-        <Box textAlign={['center', 'center']}>
+        <Box>
             {finalColumns}
         </Box>
     )
