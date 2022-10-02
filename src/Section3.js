@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import stepImage from './img/step_image.png';
 import stepImage2 from './img/step_image2.png';
-import { Container } from './App';
+import './App.css';
 
 const stepDetails = [
     {
@@ -36,10 +36,10 @@ const stepDetails = [
 function StepText({heading, description}) {
     return (
         <Box>
-            <Heading>   
+            <Heading size='3xl' lineHeight={1.3}>   
                 {heading}
             </Heading>
-            <Text>
+            <Text pt={5}>
                 {description}
             </Text>
         </Box>
@@ -55,21 +55,25 @@ function StepImage({image}) {
 function TwoEvenColumns({heading, description, image, isInverse}) {
     if (isInverse) {
         return (
-            <Container bgColor='#F83D5C' h='100vh' display='flex' color='white'>
-                <Grid gap={2} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
-                    <StepImage image={image}/>
-                    <StepText heading={heading} description={description}/>
-                </Grid>
-            </Container>
+            <Box bgColor='#F83D5C' h='100vh' display='flex' alignItems='center' color='white'>
+                <Box className='container'>
+                    <Grid gap={5} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
+                        <StepImage image={image}/>
+                        <StepText heading={heading} description={description}/>
+                    </Grid>
+                </Box>
+            </Box>
         )
     } else {
         return (
-            <Container h='100vh' display='flex'>
-                <Grid gap={2} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
-                    <StepText heading={heading} description={description}/>
-                    <StepImage image={image}/>
-                </Grid>
-            </Container>
+            <Box h='100vh' display='flex' alignItems='center'>
+                <Box className='container'>
+                    <Grid gap={5} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
+                        <StepText heading={heading} description={description}/>
+                        <StepImage image={image}/>
+                    </Grid>
+                </Box>
+            </Box>
         )
     }
 

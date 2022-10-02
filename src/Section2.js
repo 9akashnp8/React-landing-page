@@ -6,7 +6,7 @@ import {
     Text
 } from '@chakra-ui/react';
 import courseCardPlaceholder from './img/course_card_placeholder.png';
-import { Container } from './App';
+import './App.css';
 
 const primaryColor = "#F83D5C";
 
@@ -21,8 +21,13 @@ const courseDatas = [
 
 function CourseCard({course, description}) {
     return (
-        <Box bgColor='white'>
-            <Image boxSize='200px' src={courseCardPlaceholder} alt='' />
+        <Box 
+          bgColor='white' 
+          p={8} 
+          textAlign='center'
+          borderRadius='1rem'
+        >
+            <Image w='200px' m='auto' src={courseCardPlaceholder} alt='' />
             <Heading>{course}</Heading>
             <Text>{description}</Text>
         </Box>
@@ -40,16 +45,20 @@ export default function ThreeColumnCourses() {
   })
 
   return (
-    <Container bgColor={primaryColor}>
-      <Grid 
-        gap={5} 
-        gridAutoFlow={['row', 'row', 'column']} 
-        gridAutoColumns='1fr' 
-        placeItems='center' 
-        h='100vh'
-      >
-        {courseCardList}
-      </Grid>
-    </Container>
+    <Box bgColor={primaryColor} h='100vh' display='flex' alignItems='center'>
+      <Box className='container'>
+        <Heading color='white' size='3xl' textAlign='center'>Our Courses</Heading>
+        <Grid 
+          gap={5} 
+          gridAutoFlow={['row', 'row', 'column']} 
+          gridAutoColumns='1fr'
+          py='4rem'
+        >
+          {courseCardList}
+        </Grid>
+        <Text color='white' textAlign='center'>Get Up to 15% discount on fees.</Text>
+        <Text color='white' textAlign='center'>Start your 10 Days free trial TODAY!</Text>
+      </Box>
+    </Box>
   )
 }

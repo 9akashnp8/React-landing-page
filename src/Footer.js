@@ -5,11 +5,13 @@ import {
     Image,
     List,
     ListItem,
-    ListIcon,
+    Flex,
+    Heading,
     Divider
 } from '@chakra-ui/react';
 import logo from './img/logo.png';
-import { Container } from './App';
+import googlePlayImage from './img/google.png'
+import './App.css';
 
 function FooterDescription() {
     return (
@@ -58,19 +60,30 @@ function FooterAddress() {
 
 export default function Footer() {
     return (
-        <Container bgColor='#F83D5C'>
-            <Divider/>
-            <Grid
-                gap={5} 
-                gridAutoFlow={['row', 'row', 'column']} 
-                gridAutoColumns='1fr' 
-                placeItems='center'
-                py={10}
-            >
-                <FooterDescription/>
-                <FooterLogo/>
-                <FooterAddress/>
-            </Grid>
-        </Container>
+        <Box bgColor='#F83D5C'>
+            <Box className='container'>
+                <Flex align='center' justify='center' direction='column'>
+                    <Box>
+                        <Heading color='white' textAlign='center' p={10} size='xl'>Download Now!</Heading>
+                        <Flex direction={['column', 'column', 'row']}>
+                            <Image src={googlePlayImage} alt='' p={10} />
+                            <Image src={googlePlayImage} alt='' p={10} />
+                        </Flex>
+                    </Box>
+                </Flex>
+                <Divider/>
+                <Grid
+                    gap={5} 
+                    gridAutoFlow={['row', 'row', 'column']} 
+                    gridAutoColumns='1fr' 
+                    placeItems='center'
+                    py={10}
+                >
+                    <FooterDescription/>
+                    <FooterLogo/>
+                    <FooterAddress/>
+                </Grid>
+            </Box>
+        </Box>
     )
 }
