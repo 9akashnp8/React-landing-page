@@ -15,6 +15,8 @@ import {
 } from '@chakra-ui/react';
 import Section2 from './Section2';
 import Section3 from './Section3';
+import Section4 from './Section4';
+import Footer from './Footer';
 import logo from './img/logo.png'
 
 const primaryColor = "#F83D5C";
@@ -69,8 +71,17 @@ function HeroHeading() {
 
 function Hero() {
   return (
-    <Box px={['1rem', '2rem', '4rem', '4rem', '8rem']} my={['0', '1rem']}>
-      <Grid gap={2} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
+    <Box 
+      px={['1rem', '2rem', '4rem', '4rem', '8rem']} 
+      my={['0', '1rem']}
+    >
+      <Grid 
+        gap={2} 
+        gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} 
+        gridAutoColumns='1fr' 
+        placeItems='center'
+        h='calc(100vh - 90px)'
+      >
         <HeroHeading/>
         <RegistrationForm/>
       </Grid>
@@ -85,6 +96,8 @@ function App() {
       <Hero/>
       <Section2/>
       <Section3/>
+      <Section4/>
+      <Footer/>
     </ChakraProvider>
   );
 }

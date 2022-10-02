@@ -34,13 +34,19 @@ export default function ThreeColumnCourses() {
 
   courseDatas.forEach((courseData) => {
     courseCardList.push(
-      <CourseCard course={courseData.title} description={courseData.description}/>
+      <CourseCard key={courseData.id} course={courseData.title} description={courseData.description}/>
     )
   })
 
   return (
-    <Grid gap={5} gridAutoFlow={['row', 'row', 'column']} gridAutoColumns='1fr' placeItems='center' px={['1rem', '2rem', '4rem', '8rem']}
+    <Grid 
+      gap={5} 
+      gridAutoFlow={['row', 'row', 'column']} 
+      gridAutoColumns='1fr' 
+      placeItems='center' 
+      px={['1rem', '2rem', '4rem', '8rem']}
       bgColor={primaryColor}
+      h='100vh'
     >
       {courseCardList}
     </Grid>
