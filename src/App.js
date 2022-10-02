@@ -21,9 +21,6 @@ import logo from './img/logo.png'
 import playstore from './img/playstore.png';
 import appstore from './img/appstore.png';
 import './App.css';
-import { useState } from 'react';
-
-const primaryColor = "#F83D5C";
 
 function Header() {
   return (

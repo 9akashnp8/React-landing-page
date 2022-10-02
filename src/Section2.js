@@ -8,8 +8,6 @@ import {
 import courseCardPlaceholder from './img/course_card_placeholder.png';
 import './App.css';
 
-const primaryColor = "#F83D5C";
-
 // const breakpoints = ['0em', <small> '30em', <mobile> '48em', <laptop> '62em', <desktop> '80em', <bigscreen> '96em']
 //  [small, mobile, laptop, desktop, bigscreen]
 
@@ -46,7 +44,7 @@ export default function ThreeColumnCourses() {
 
   return (
     <Box bg='linear-gradient(to right, #F83D5C, #FD4B2F)' minH={['100%', '100%', '100vh']} display='flex' alignItems='center'>
-      <Box className='container' py={[5, 5, 5, 0]} px={[ , , 10, 0]}>
+      <Box className='container' py={[5, 5, 5, 0]} px={[ 0, 0, 10, 0]}>
         <Heading color='white' size='3xl' textAlign='center'>Our Courses</Heading>
         <Grid 
           gap={5} 
