@@ -9,6 +9,7 @@ import {
     Divider
 } from '@chakra-ui/react';
 import logo from './img/logo.png';
+import { Container } from './App';
 
 function FooterDescription() {
     return (
@@ -57,10 +58,7 @@ function FooterAddress() {
 
 export default function Footer() {
     return (
-        <Box 
-            px={['1rem', '2rem', '4rem', '4rem', '8rem']} 
-            bgColor='#F83D5C'
-        >
+        <Container bgColor='#F83D5C'>
             <Divider/>
             <Grid
                 gap={5} 
@@ -73,6 +71,6 @@ export default function Footer() {
                 <FooterLogo/>
                 <FooterAddress/>
             </Grid>
-        </Box>
+        </Container>
     )
 }

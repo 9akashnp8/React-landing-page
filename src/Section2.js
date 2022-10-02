@@ -5,7 +5,8 @@ import {
     Heading,
     Text
 } from '@chakra-ui/react';
-import courseCardPlaceholder from './img/course_card_placeholder.png'
+import courseCardPlaceholder from './img/course_card_placeholder.png';
+import { Container } from './App';
 
 const primaryColor = "#F83D5C";
 
@@ -39,16 +40,16 @@ export default function ThreeColumnCourses() {
   })
 
   return (
-    <Grid 
-      gap={5} 
-      gridAutoFlow={['row', 'row', 'column']} 
-      gridAutoColumns='1fr' 
-      placeItems='center' 
-      px={['1rem', '2rem', '4rem', '8rem']}
-      bgColor={primaryColor}
-      h='100vh'
-    >
-      {courseCardList}
-    </Grid>
+    <Container bgColor={primaryColor}>
+      <Grid 
+        gap={5} 
+        gridAutoFlow={['row', 'row', 'column']} 
+        gridAutoColumns='1fr' 
+        placeItems='center' 
+        h='100vh'
+      >
+        {courseCardList}
+      </Grid>
+    </Container>
   )
 }

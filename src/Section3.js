@@ -7,6 +7,7 @@ import {
 } from '@chakra-ui/react';
 import stepImage from './img/step_image.png';
 import stepImage2 from './img/step_image2.png';
+import { Container } from './App';
 
 const stepDetails = [
     {
@@ -54,21 +55,21 @@ function StepImage({image}) {
 function TwoEvenColumns({heading, description, image, isInverse}) {
     if (isInverse) {
         return (
-            <Box px={['1rem', '2rem', '4rem', '4rem', '8rem']} my={['0', '1rem']} h='100vh' display='flex' bgColor='#F83D5C' color='white'>
+            <Container bgColor='#F83D5C' h='100vh' display='flex' color='white'>
                 <Grid gap={2} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
                     <StepImage image={image}/>
                     <StepText heading={heading} description={description}/>
                 </Grid>
-            </Box>
+            </Container>
         )
     } else {
         return (
-            <Box px={['1rem', '2rem', '4rem', '4rem', '8rem']} my={['0', '1rem']} h='100vh' display='flex'>
+            <Container h='100vh' display='flex'>
                 <Grid gap={2} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
                     <StepText heading={heading} description={description}/>
                     <StepImage image={image}/>
                 </Grid>
-            </Box>
+            </Container>
         )
     }
 

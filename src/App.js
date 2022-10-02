@@ -21,16 +21,31 @@ import logo from './img/logo.png'
 
 const primaryColor = "#F83D5C";
 
+export function Container({children, bgColor, color, h, display}) {
+  return (
+    <Box 
+      px={['1rem', '2rem', '4rem', '6rem', '8rem']} 
+      py="2rem"
+      bgColor={bgColor}
+      color={color}
+      h={h}
+      display={display}
+    >
+      {children}
+    </Box>
+  )
+}
+
 function Header() {
   return (
-    <Box px={['1rem', '2rem', '4rem', '6rem', '8rem']} py="2rem">
+    <Container>
       <Flex align='center' justify='space-between'>
         <Image htmlWidth='160px' src={logo} alt='Lakshya Logo' />
         <Button colorScheme='orange' size='lg'>
           +91 9061277777
         </Button>
       </Flex>
-    </Box>
+    </Container>
   )
 }
 
@@ -71,10 +86,7 @@ function HeroHeading() {
 
 function Hero() {
   return (
-    <Box 
-      px={['1rem', '2rem', '4rem', '4rem', '8rem']} 
-      my={['0', '1rem']}
-    >
+    <Container>
       <Grid 
         gap={2} 
         gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} 
@@ -85,7 +97,7 @@ function Hero() {
         <HeroHeading/>
         <RegistrationForm/>
       </Grid>
-    </Box>
+    </Container>
   )
 }
 
