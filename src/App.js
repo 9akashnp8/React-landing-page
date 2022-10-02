@@ -18,6 +18,8 @@ import Section3 from './Section3';
 import Section4 from './Section4';
 import Footer from './Footer';
 import logo from './img/logo.png'
+import playstore from './img/playstore.png';
+import appstore from './img/appstore.png';
 
 const primaryColor = "#F83D5C";
 
@@ -70,16 +72,26 @@ function HeroHeading() {
   return (
     <Box>
       <Heading as='h1' size='2xl' lineHeight='tall'>
-        <Highlight
-          query='Recorded'
-          styles={{ px: '2', py: '1', rounded: 'full', bg: 'red.100' }}
-        >
           Learn Unlimited with Lakshya Recorded Classes.
-        </Highlight>
       </Heading>
       <Text as='h3' fontSize='xl' py={5}>
-        Start Learning Now! Download the App & Get access to unlimited sessions.
+        <Highlight
+          query='Download the App'
+          styles={{ px: '2', py: '1', rounded: 'full', bg: 'red.100' }}
+        >
+          Start Learning Now! Download the App & Get access to unlimited sessions.
+        </Highlight>
       </Text>
+      <Flex gap={10} textAlign='center'>
+        <Box>
+          <Image src={playstore}/>
+          <Text>Android</Text>
+        </Box>
+        <Box>
+          <Image src={appstore}/>
+          <Text>iOS</Text>
+        </Box>
+      </Flex>
     </Box>
   )
 }
@@ -91,8 +103,9 @@ function Hero() {
         gap={2} 
         gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} 
         gridAutoColumns='1fr' 
-        placeItems='center'
-        h='calc(100vh - 90px)'
+        justifyItems='end'
+        alignItems='center'
+        h='calc(100vh - 190px)'
       >
         <HeroHeading/>
         <RegistrationForm/>
