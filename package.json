@@ -1,5 +1,5 @@
 {
-  "homepage": "https://myusername.github.io/react-recorded-landing-page",
+  "homepage": "https://9akashnp8.github.io",
   "name": "react-recorded-landing-page",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
