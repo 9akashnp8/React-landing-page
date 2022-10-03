@@ -12,8 +12,7 @@ import {
 } from '@chakra-ui/react';
 import logo from './img/logo.png';
 import googlePlayImage from './img/google.png'
-import './App.css';
-import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa'; 
+import './App.css'; 
 
 function FooterDescription() {
     return (
@@ -52,11 +51,9 @@ function FooterAddress() {
             </ListItem>
             <ListItem>
                 +91 9061277777 (IND), +971 568631499 (UAE)
-                <ListIcon as={FaPhoneAlt} mx={2}/>
             </ListItem>
             <ListItem>
                 info@lakshyaca.com
-                <ListIcon as={FaEnvelope} mx={2}/>
             </ListItem>
         </List>
     )
