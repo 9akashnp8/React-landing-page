@@ -21,13 +21,14 @@ import logo from './img/logo.png'
 import playstore from './img/playstore.png';
 import appstore from './img/appstore.png';
 import './App.css';
+import { FaPhoneAlt } from 'react-icons/fa';
 
 function Header() {
   return (
     <Box className='container' py={5}>
       <Flex align='center' justify='space-between'>
         <Image htmlWidth='160px' src={logo} alt='Lakshya Logo' />
-        <Button bgColor='#F83D5C' color='white' size='lg'>
+        <Button leftIcon={<FaPhoneAlt />} bgColor='#F83D5C' color='white' size='lg'>
           +91 9061277777
         </Button>
       </Flex>
