@@ -1,0 +1,2 @@
+.container{margin-inline:auto;width:min(1170px,100% - 2rem)}.solid{background:linear-gradient(-45deg,#ee7752,#e73c7e,#e0470b,)}.gradient{-webkit-animation:Gradient 15s ease infinite;animation:Gradient 15s ease infinite;background:linear-gradient(-45deg,#ee7752,#e73c7e,#e0470b);background-size:400% 400%}@-webkit-keyframes Gradient{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}@keyframes Gradient{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}
+/*# sourceMappingURL=main.a7f1cfea.css.map*/
