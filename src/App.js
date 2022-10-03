@@ -36,28 +36,54 @@ function Header() {
 }
 
 function RegistrationForm() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.targe);
+
+    const json = {};
+    formData.forEach(function(value, prop) {
+      json[prop] = value;
+    })
+
+    console.log(json);
+
+    const response = fetch("https://j1j9nrn642.execute-api.ap-south-1.amazonaws.com/landingPageLambda", {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"},
+      body: json
+    })
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
   return (
-    <Flex
-      className='gradient'
-      onMouse
-      align='center' 
-      direction='column'
-      gap='1rem' 
-      w='100%'
-      p={6} 
-      borderRadius='1em'
-    >
-      <Heading textAlign='center' color='white'>Or Get In Touch with our Experts!</Heading>
-      <Input placeholder='full name' _placeholder={{ opacity: 1, color: 'white' }} />
-      <Input placeholder='email address' _placeholder={{ opacity: 1, color: 'white' }} />
-      <Input placeholder='phone' _placeholder={{ opacity: 1, color: 'white' }} />
-      <Select placeholder='interested course' _placeholder={{ opacity: 1, color: 'white' }}>
-        <option value='1'>CA Foundation</option>
-        <option value='2'>CMA Foundation</option>
-        <option value='3'>CSEET</option>
-      </Select>
-      <Button>Register</Button>
-    </Flex>
+    <form onSubmit={handleSubmit}>
+      <Flex
+        className='gradient'
+        onMouse
+        align='center' 
+        direction='column'
+        gap='1rem' 
+        w='100%'
+        p={6} 
+        borderRadius='1em'
+      >
+        <Heading textAlign='center' color='white'>Or Get In Touch with our Experts!</Heading>
+        <Input placeholder='full name' _placeholder={{ opacity: 1, color: 'white' }} name='name'/>
+        <Input placeholder='email address' _placeholder={{ opacity: 1, color: 'white' }} name='email' />
+        <Input placeholder='phone' _placeholder={{ opacity: 1, color: 'white' }} name='phone'/>
+        <Select placeholder='interested course' _placeholder={{ opacity: 1, color: 'white' }} name='course'>
+          <option value='1'>CA Foundation</option>
+          <option value='2'>CMA Foundation</option>
+          <option value='3'>CSEET</option>
+        </Select>
+        <Button type='submit'>Register</Button>
+      </Flex>
+    </form>
   )
 }
 
