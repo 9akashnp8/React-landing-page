@@ -48,7 +48,7 @@ function RegistrationForm() {
       'fullName': event.target.name.value,
       'email': event.target.email.value,
       'phone': event.target.phone.value,
-      'course': event.target.course.value
+      'course': event.target.course.selectedOptions[0].text
     }
 
     axios.post('https://j1j9nrn642.execute-api.ap-south-1.amazonaws.com/landingPageLambda', payload)
