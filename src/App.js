@@ -37,35 +37,30 @@ function Header() {
 }
 
 function RegistrationForm() {
+
   function handleSubmit(event) {
+
     event.preventDefault();
 
-    const formData = new FormData(event.targe);
+    const axios = require('axios').default;
 
-    const json = {};
-    formData.forEach(function(value, prop) {
-      json[prop] = value;
-    })
+    let payload = {
+      'fullName': event.target.name.value,
+      'email': event.target.email.value,
+      'phone': event.target.phone.value,
+      'course': event.target.course.value
+    }
 
-    console.log(json);
-
-    const response = fetch("https://j1j9nrn642.execute-api.ap-south-1.amazonaws.com/landingPageLambda", {
-      method: "POST",
-      headers: {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"},
-      body: json
-    })
-    .then(response => {
-      console.log(response);
-    })
-    .catch(error => {
-      console.log(error);
-    })
+    axios.post('https://j1j9nrn642.execute-api.ap-south-1.amazonaws.com/landingPageLambda', payload)
+      .then(function (response) {
+        console.log(response.data);
+      })
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <Flex
         className='gradient'
-        onMouse
         align='center' 
         direction='column'
         gap='1rem' 
