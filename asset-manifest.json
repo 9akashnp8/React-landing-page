@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/react-landing-page/static/css/main.a7f1cfea.css",
-    "main.js": "/react-landing-page/static/js/main.ca92b3bd.js",
+    "main.js": "/react-landing-page/static/js/main.04618cb8.js",
     "static/js/787.8bf4e066.chunk.js": "/react-landing-page/static/js/787.8bf4e066.chunk.js",
-    "static/media/step_image2.png": "/react-landing-page/static/media/step_image2.b1a7c4be959528781097.png",
-    "static/media/step_image.png": "/react-landing-page/static/media/step_image.8480dfd579775ba579ff.png",
+    "static/media/01.png": "/react-landing-page/static/media/01.0061082e6ddc075ba068.png",
+    "static/media/03.png": "/react-landing-page/static/media/03.d227fa60601101cae427.png",
+    "static/media/02.png": "/react-landing-page/static/media/02.c86d58b7a2f025a9dbb4.png",
     "static/media/course_card_placeholder.png": "/react-landing-page/static/media/course_card_placeholder.0ebb4d2f600f77b0f4ba.png",
     "static/media/logo.png": "/react-landing-page/static/media/logo.f7f112c4e544f928bcd8.png",
     "index.html": "/react-landing-page/index.html",
     "main.a7f1cfea.css.map": "/react-landing-page/static/css/main.a7f1cfea.css.map",
-    "main.ca92b3bd.js.map": "/react-landing-page/static/js/main.ca92b3bd.js.map",
+    "main.04618cb8.js.map": "/react-landing-page/static/js/main.04618cb8.js.map",
     "787.8bf4e066.chunk.js.map": "/react-landing-page/static/js/787.8bf4e066.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a7f1cfea.css",
-    "static/js/main.ca92b3bd.js"
+    "static/js/main.04618cb8.js"
   ]
 }
