@@ -5,8 +5,10 @@ import {
     Heading,
     Image
 } from '@chakra-ui/react';
-import stepImage from './img/step_image.png';
-import stepImage2 from './img/step_image2.png';
+// import stepImage from './img/step_image.png';
+import stepImage from './img/01.png';
+import stepImage2 from './img/02.png';
+import stepImage3 from './img/03.png';
 import './App.css';
 
 const stepDetails = [
@@ -29,7 +31,7 @@ const stepDetails = [
         isInverse: false,
         heading: 'Step 3 - 10 Days Free Trial & Learn Unlimited',
         description: 'Click on the 10 Days free trial and start learning your dream course anytime, anywhere with the Indian Institute of Commerce, Lakshya.',
-        image: stepImage
+        image: stepImage3
     }
 ]
 
@@ -48,7 +50,7 @@ function StepText({heading, description}) {
 
 function StepImage({image}) {
     return (
-        <Image src={image} alt='Dan Abramov' />
+        <Image src={image} w='100%' alt='Dan Abramov' />
     )
 }
 
