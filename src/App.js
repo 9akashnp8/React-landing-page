@@ -132,7 +132,7 @@ function Hero() {
           gridAutoColumns='1fr' 
           justifyItems='end'
           alignItems='center'
-          minHh={['100vh', '100vh', 'calc(100vh - 450px)', 'calc(100vh - 850px)', 'calc(100vh - 120px)']}
+          minH={['100vh', '100vh', 'calc(100vh - 450px)', 'calc(100vh - 850px)', 'calc(100vh - 120px)']}
         >
           <HeroHeading/>
           <RegistrationForm/>
