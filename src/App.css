@@ -3,6 +3,12 @@
     margin-inline: auto;
 }
 
+.custom-background {
+    background-image: url("./img/beams-home@95.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .solid {
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #e0470b, );
 }

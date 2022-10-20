@@ -3,15 +3,16 @@ import {
     Grid,
     Text,
     Image,
+    Link,
     List,
     ListItem,
-    ListIcon,
     Flex,
     Heading,
     Divider
 } from '@chakra-ui/react';
 import logo from './img/logo.png';
-import googlePlayImage from './img/google.png'
+import googlePlayImage from './img/google.png';
+import appStoreImage from './img/app_store.png';
 import './App.css'; 
 
 function FooterDescription() {
@@ -67,8 +68,8 @@ export default function Footer() {
                     <Box>
                         <Heading color='white' textAlign='center' p={[5, 5, 10]} size='xl'>Download Now!</Heading>
                         <Flex direction={['column', 'column', 'row']}>
-                            <Image src={googlePlayImage} alt='' p={[5, 5, 10]} />
-                            <Image src={googlePlayImage} alt='' p={[5, 5, 10]} />
+                            <Link href='https://play.google.com/store/apps/details?id=com.lakshya.academy'><Image src={googlePlayImage} alt='' p={[5, 5, 10]} /></Link> 
+                            <Link href='https://apps.apple.com/in/app/lakshya/id1608662481'><Image src={appStoreImage} alt='' p={[5, 5, 10]} /></Link>
                         </Flex>
                     </Box>
                 </Flex>

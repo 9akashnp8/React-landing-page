@@ -11,26 +11,27 @@ import {
   theme,
   Select,
   Text,
-  Image
+  Image,
+  Link
 } from '@chakra-ui/react';
 import Section2 from './Section2';
 import Section3 from './Section3';
-// import Section4 from './Section4';
 import Footer from './Footer';
 import logo from './img/logo.png'
-import playstore from './img/playstore.png';
-import appstore from './img/appstore.png';
 import './App.css';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { FaGooglePlay, FaAppStoreIos } from 'react-icons/fa';
 
 function Header() {
   return (
     <Box className='container' py={5}>
       <Flex align='center' justify='space-between'>
         <Image htmlWidth='160px' src={logo} alt='Lakshya Logo' />
-        <Button leftIcon={<FaPhoneAlt />} bgColor='#F83D5C' color='white' size='lg'>
-          +91 9061277777
-        </Button>
+        <Link href='tel:+919061277777'>
+          <Button leftIcon={<FaPhoneAlt />} bgColor='#F83D5C' colorScheme='red' color='white' size='lg' boxShadow='md'>
+            +91 9061277777
+          </Button>
+        </Link>
       </Flex>
     </Box>
   )
@@ -67,6 +68,7 @@ function RegistrationForm() {
         w='100%'
         p={6} 
         borderRadius='1em'
+        boxShadow='md'
       >
         <Heading textAlign='center' color='white'>Or Get In Touch with our Experts!</Heading>
         <Input placeholder='full name' _placeholder={{ opacity: 1, color: 'white' }} name='name'/>
@@ -86,13 +88,13 @@ function RegistrationForm() {
 function HeroHeading() {
   return (
     <Box textAlign={['center', 'center', 'center', 'left']}>
-      <Heading as='h1' size={['xl', 'xl', 'xl', '2xl']}>
+      <Heading as='h1' size={['xl', 'xl', 'xl', '3xl']} lineHeight={1.5}>
           Learn Unlimited with Lakshya Recorded Classes.
       </Heading>
       <Text as='h3' fontSize={['1.1rem']} py={5}>
         <Highlight
           query='Download the App'
-          styles={{ px: '2', py: '1', rounded: '0.5rem', bg: '#F83D5C', color: 'white' }}
+          styles={{ px: '2', py: '1', color: '#F83D5C', textDecoration: 'underline', textUnderlineOffset: '.4rem'}}
         >
           Start Learning Now! Download the App & Get access to unlimited sessions.
         </Highlight>
@@ -100,17 +102,41 @@ function HeroHeading() {
       <Flex 
         mx={['auto', 'auto', 'auto', '0']}
         gap={10}
-        border='2px solid #F83D5C'
-        borderRadius='1rem'
-        p={5}
+        // border='2px solid #F83D5C'
+        // borderRadius='1rem'
+        // p={5}
         w='max-content'>
         <Box>
-          <Image src={playstore}/>
-          <Text>Android</Text>
+          <Link href='https://play.google.com/store/apps/details?id=com.lakshya.academy'>
+            <Button
+              size='lg'
+              boxShadow='md'
+              bgColor='#F83D5C'
+              colorScheme='red'
+              color='white'
+              leftIcon={<FaGooglePlay/>}
+            >
+              Android
+            </Button>
+          </Link>
+          {/* <Image src={playstore}/>
+          <Text>Android</Text> */}
         </Box>
         <Box>
-          <Image src={appstore}/>
-          <Text>iOS</Text>
+          <Link href='https://apps.apple.com/in/app/lakshya/id1608662481'>
+            <Button
+              size='lg'
+              boxShadow='md'
+              bgColor='#F83D5C'
+              colorScheme='red'
+              color='white'
+              leftIcon={<FaAppStoreIos/>}
+            >
+              iOS
+            </Button>
+          </Link>
+          {/* <Image src={appstore}/>
+          <Text>iOS</Text> */}
         </Box>
       </Flex>
     </Box>
@@ -120,14 +146,14 @@ function HeroHeading() {
 function Hero() {
   return (
     <Box 
-      className='container' 
+      className='container hero-container' 
       minH={['100vh', '100vh', 'calc(100vh - 450px)', 'calc(100vh - 850px)', 'calc(100vh - 120px)']} 
       display='flex'
-      mb={[5, 10, 10, 2]}
+      pb={[5, 10, 10, 2]}
     >
       <Box display='flex'>
         <Grid 
-          gap={[5, 10, 10,  2]} 
+          gap={[2, 10, 10, 2]} 
           gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} 
           gridAutoColumns='1fr' 
           justifyItems='end'
@@ -145,8 +171,10 @@ function Hero() {
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Header/>
-      <Hero/>
+      <div className='custom-background'>
+        <Header/>
+        <Hero/>
+      </div>
       <Section2/>
       <Section3/>
       <Footer/>
