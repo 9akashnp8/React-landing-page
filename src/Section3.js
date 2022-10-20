@@ -68,7 +68,7 @@ function TwoEvenColumns({heading, description, image, isInverse}) {
         )
     } else {
         return (
-            <Box h='100vh' display='flex' alignItems='center' textAlign={['center', 'center', 'center', 'left']}>
+            <Box h='100vh' display='flex' alignItems='center' textAlign={['center', 'center', 'center', 'left']} className='custom-background'>
                 <Box className='container'>
                     <Grid gap={5} gridAutoFlow={['row', 'row', 'row', 'column', 'column', 'column']} gridAutoColumns='1fr' placeItems='center'>
                         <StepText heading={heading} description={description}/>
